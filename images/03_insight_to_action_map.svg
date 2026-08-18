@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900">
+  <rect width="1500" height="900" fill="white"/>
+  <style>
+    .title{font:700 34px Arial,sans-serif;fill:#111827}.head{font:700 20px Arial,sans-serif;fill:#111827}.cell{fill:#fff;stroke:#9CA3AF;stroke-width:1.6}.txt{font:400 18px Arial,sans-serif;fill:#111827}.arrow{stroke:#6B7280;stroke-width:2.5;fill:none;marker-end:url(#a)}
+  </style>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#6B7280"/></marker></defs>
+  <text x="750" y="60" text-anchor="middle" class="title">From Feedback Patterns to Improvement Actions</text>
+  <text x="250" y="135" text-anchor="middle" class="head">Observed Strength</text><text x="750" y="135" text-anchor="middle" class="head">Identified Weakness</text><text x="1250" y="135" text-anchor="middle" class="head">Improvement Action</text>
+  <g>
+    <rect x="70" y="180" width="360" height="120" rx="14" class="cell"/><text x="250" y="225" text-anchor="middle" class="txt"><tspan x="250">Active instructor participation</tspan><tspan x="250" dy="27">and responsiveness</tspan></text>
+    <rect x="570" y="180" width="360" height="120" rx="14" class="cell"/><text x="750" y="225" text-anchor="middle" class="txt"><tspan x="750">Limited lecture delivery</tspan><tspan x="750" dy="27">and interactivity</tspan></text>
+    <rect x="1070" y="180" width="360" height="120" rx="14" class="cell"/><text x="1250" y="215" text-anchor="middle" class="txt"><tspan x="1250">Strengthen training on</tspan><tspan x="1250" dy="27">interactive teaching methods</tspan></text>
+    <path d="M430 240 H555" class="arrow"/><path d="M930 240 H1055" class="arrow"/>
+
+    <rect x="70" y="350" width="360" height="120" rx="14" class="cell"/><text x="250" y="395" text-anchor="middle" class="txt"><tspan x="250">Systematic course structure</tspan><tspan x="250" dy="27">and balanced feedback</tspan></text>
+    <rect x="570" y="350" width="360" height="120" rx="14" class="cell"/><text x="750" y="395" text-anchor="middle" class="txt"><tspan x="750">Unstructured classes</tspan><tspan x="750" dy="27">and poor lecture pacing</tspan></text>
+    <rect x="1070" y="350" width="360" height="120" rx="14" class="cell"/><text x="1250" y="385" text-anchor="middle" class="txt"><tspan x="1250">Standardize course operations</tspan><tspan x="1250" dy="27">and syllabus design</tspan></text>
+    <path d="M430 410 H555" class="arrow"/><path d="M930 410 H1055" class="arrow"/>
+
+    <rect x="70" y="520" width="360" height="120" rx="14" class="cell"/><text x="250" y="565" text-anchor="middle" class="txt"><tspan x="250">Practical learning materials</tspan><tspan x="250" dy="27">with strong accessibility</tspan></text>
+    <rect x="570" y="520" width="360" height="120" rx="14" class="cell"/><text x="750" y="565" text-anchor="middle" class="txt"><tspan x="750">Limited practicality in</tspan><tspan x="750" dy="27">lab-based learning</tspan></text>
+    <rect x="1070" y="520" width="360" height="120" rx="14" class="cell"/><text x="1250" y="555" text-anchor="middle" class="txt"><tspan x="1250">Reorganize curriculum around</tspan><tspan x="1250" dy="27">practical skills</tspan></text>
+    <path d="M430 580 H555" class="arrow"/><path d="M930 580 H1055" class="arrow"/>
+
+    <rect x="70" y="690" width="360" height="120" rx="14" class="cell"/><text x="250" y="735" text-anchor="middle" class="txt"><tspan x="250">In-class interaction and</tspan><tspan x="250" dy="27">discussion opportunities</tspan></text>
+    <rect x="570" y="690" width="360" height="120" rx="14" class="cell"/><text x="750" y="725" text-anchor="middle" class="txt"><tspan x="750">Limited structured interaction</tspan><tspan x="750" dy="27">and assessment issues</tspan></text>
+    <rect x="1070" y="690" width="360" height="120" rx="14" class="cell"/><text x="1250" y="725" text-anchor="middle" class="txt"><tspan x="1250">Introduce structured interaction</tspan><tspan x="1250" dy="27">and improve assessment methods</tspan></text>
+    <path d="M430 750 H555" class="arrow"/><path d="M930 750 H1055" class="arrow"/>
+  </g>
+</svg>
