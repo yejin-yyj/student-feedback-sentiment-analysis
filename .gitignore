@@ -1,0 +1,14 @@
+# Institutional / private data
+data/raw/
+data/private/
+*.xlsx
+
+# Model artifacts
+models/
+*.pt
+*.bin
+
+# Notebook / Python cache
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
