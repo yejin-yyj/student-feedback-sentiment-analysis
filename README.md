@@ -118,19 +118,6 @@ The dissertation proposed improvement actions but did not implement them in a li
 
 A fall in negative feedback alone would not be sufficient evidence of improvement if response coverage also fell materially. Outcome, coverage, and control measures should therefore be reviewed together.
 
-## Analytical Workflow
-
-The project followed a structured workflow from problem definition through deployment:
-
-1. **Problem definition**: define how open-ended feedback could support service improvement.
-2. **Data collection**: consolidate multi-year feedback across six semesters.
-3. **Data cleaning**: establish a consistent analysis-ready population.
-4. **Feature representation and labeling**: create a consistent sentiment classification standard.
-5. **Classification**: organize comments into positive, negative, and neutral categories.
-6. **Validation**: test reliability using both random and future-period evaluation.
-7. **Service mapping**: connect recurring patterns to improvement areas.
-8. **Deployment concept**: use the process for recurring semester-level monitoring and reporting.
-
 ## Supporting Technical Validation
 
 The classification method was treated as a supporting component of the broader analysis rather than the final outcome.
@@ -151,34 +138,6 @@ The temporal split tested whether a process built on historical feedback could r
 | Temporal split | Contextual classifier | **87%** | **0.93** | **0.84** | 0.55 |
 
 The future-period evaluation showed stronger identification of negative feedback, while neutral feedback remained less consistent. The practical implication is to use classification to organize and prioritize feedback while retaining human review for ambiguous or suggestion-oriented comments.
-
-## Repository Structure
-
-```text
-student-feedback-sentiment-analysis/
-├── README.md
-├── ba_artifacts/
-│   ├── README.md
-│   ├── 01_stakeholder_decision_matrix.md
-│   ├── 02_future_state_process.md
-│   ├── 03_business_requirements.md
-│   ├── 04_prioritization_framework.md
-│   ├── 05_risk_and_controls.md
-│   └── 06_measurement_and_uat.md
-├── notebooks/
-│   ├── 01_data_preprocessing.ipynb
-│   └── 02_feedback_classification_validation.ipynb
-├── data/
-│   └── sample_feedback.csv
-├── results/
-│   └── model_performance.csv
-├── images/
-│   ├── 01_feedback_analytics_workflow.svg
-│   ├── 02_model_performance.svg
-│   └── 03_insight_to_action_map.svg
-├── requirements.txt
-└── .gitignore
-```
 
 ## Limitations
 
