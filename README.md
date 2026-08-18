@@ -6,17 +6,17 @@ This portfolio project is based on my MSc Business Analytics dissertation, **Usi
 
 ## Business Problem
 
-Universities collect large volumes of open-ended student feedback, but free-text comments are difficult to review consistently at scale. The business question was therefore not simply whether a model could classify sentiment, but whether feedback could be converted into a repeatable decision-support process that helps identify emerging concerns, validate service strengths, and prioritize improvement actions.
+Universities collect large volumes of open-ended student feedback, but free-text comments are difficult to review consistently at scale. The central question was whether this feedback could be converted into a repeatable analysis process that helps identify emerging concerns, validate service strengths, and prioritize improvement actions.
 
 ## Project Objective
 
 The analysis was designed to:
 
 1. turn unstructured feedback into a consistent positive / negative / neutral classification;
-2. compare a contextual NLP model with a simpler baseline to justify model choice;
+2. compare a contextual NLP model with a simpler baseline to assess whether added complexity improved classification quality;
 3. test whether the model remained useful on future, unseen feedback rather than only a random sample;
 4. investigate classification errors that could hide genuine student concerns;
-5. translate recurring patterns into practical recommendations for student-support services.
+5. translate recurring feedback patterns into practical recommendations for student-support services.
 
 ## Data
 
@@ -28,19 +28,19 @@ The original feedback text and labeled derivatives are **not included in this pu
 
 ### 1. Data quality and preparation
 
-Before modeling, I assessed whether the feedback was usable for consistent analysis. Missing and blank responses, duplicates, and comments shorter than three words were removed while preserving linguistic context needed by transformer models. This reduced the analytical dataset from **1,178 to 1,022 comments**.
+Missing and blank responses, duplicate comments, and comments shorter than three words were removed before analysis. Text was standardized while preserving sentence context required by transformer-based models. This reduced the analytical dataset from **1,178 to 1,022 comments**.
 
-**BA perspective:** cleaning decisions were treated as business rules because they determine what counts as valid evidence in downstream reporting.
+These inclusion rules were kept explicit because they determine which records contribute to downstream sentiment reporting and affect comparability across semesters.
 
 ### 2. Reliable ground truth
 
-A three-class coding scheme was used for positive, negative, and neutral sentiment. A 5% re-check of manually labeled feedback produced **98.35% intra-coder agreement**, providing a quality check on the target labels used for model evaluation.
+A three-class coding scheme was used for positive, negative, and neutral sentiment. A 5% re-check of manually labeled feedback produced **98.35% intra-coder agreement**, providing a quality check on the labels used for model training and evaluation.
 
-**BA perspective:** the model is only as reliable as the classification standard it is trained against, so label consistency was validated before comparing algorithms.
+Validating label consistency before comparing models reduced the risk of attributing poor performance to the algorithm when the underlying classification standard itself was inconsistent.
 
-### 3. Model comparison for decision support
+### 3. Model comparison
 
-The main model was a fine-tuned `distilbert-base-uncased` classifier, compared with a TF-IDF + SVM baseline. The objective was not to maximize technical complexity, but to determine whether contextual language understanding materially improved classification quality.
+The main model was a fine-tuned `distilbert-base-uncased` classifier, compared with a TF-IDF + SVM baseline. The comparison tested whether contextual language understanding produced a meaningful improvement over a simpler approach.
 
 ### 4. Future-period validation
 
@@ -49,17 +49,17 @@ Two evaluation scenarios were used:
 - **Random split:** stratified 80/10/10 train, validation, and test split.
 - **Temporal split:** historical feedback from 2022/23 and 2023/24 used for training/validation, with 2024/25 held out as unseen future data.
 
-**BA perspective:** temporal validation better reflects a real reporting use case, where a model trained on historical feedback must support decisions on newly arriving comments.
+The temporal split more closely reflects an operational use case in which a model built on historical feedback is applied to newly arriving comments in a later period.
 
-### 5. Error analysis and root-cause thinking
+### 5. Error analysis
 
 Aggregate accuracy was not treated as sufficient evidence of success. Misclassified comments were reviewed to understand where the model could mask complaints or confuse neutral suggestions with other sentiment classes.
 
-**BA perspective:** this step focuses on operational risk, not only model score. A high overall accuracy can still be problematic if important negative feedback is systematically missed.
+This was important because overall model accuracy can remain high even when specific error types create more serious consequences for reporting or prioritization.
 
-### 6. Translating analysis into actions
+### 6. Translating findings into actions
 
-Recurring strengths and weaknesses were mapped to specific student-support actions, including faculty teaching practices, course structure, practical learning content, and structured student interaction.
+Recurring strengths and weaknesses were mapped to specific areas for improvement, including faculty teaching practices, course structure, practical learning content, and structured student interaction.
 
 ## Results
 
@@ -69,13 +69,13 @@ Recurring strengths and weaknesses were mapped to specific student-support actio
 | Random split | SVM | 72% | 0.80 | 0.62 | 0.59 |
 | Temporal split | DistilBERT | **87%** | **0.93** | **0.84** | 0.55 |
 
-### Decision-relevant interpretation
+### Interpretation
 
-DistilBERT outperformed the SVM baseline on the random split, supporting the use of contextual NLP for nuanced feedback. On unseen 2024/25 data, overall accuracy increased to **87%** and negative-class F1 improved to **0.84**, but neutral F1 declined to **0.55**.
+DistilBERT outperformed the SVM baseline on the random split, supporting the use of contextual NLP for nuanced feedback. On unseen 2024/25 data, overall accuracy increased to **87%** and negative-class F1 improved to **0.84**, while neutral F1 declined to **0.55**.
 
-The key takeaway is therefore not simply that the model achieved 87% accuracy. The more useful business conclusion is that it became stronger at identifying complaints, while neutral and suggestion-oriented feedback remained a monitoring risk that would still require human review.
+The result suggests that the model became stronger at identifying negative feedback in the later period, but neutral and suggestion-oriented comments remained more difficult to classify consistently. For practical use, automated classification could support prioritization, while ambiguous or neutral cases would still benefit from human review.
 
-## Business / Service Recommendations
+## Recommendations
 
 The analysis linked recurring feedback patterns to actions such as:
 
@@ -103,7 +103,7 @@ student-feedback-sentiment-analysis/
 
 ## Notebook Notes
 
-The notebooks are **portfolio-cleaned versions** of the original dissertation workflow. Exploratory cells, local file paths, private student feedback, and intermediate experiments were removed. The public notebooks are organized around the final analytical logic and emphasize the reasoning behind data quality, validation, error analysis, and decision implications.
+The notebooks are cleaned versions of the original dissertation workflow. Exploratory cells, local file paths, private student feedback, and intermediate experiments were removed. The public versions follow the final analytical sequence from data preparation through validation and interpretation.
 
 ## Limitations
 
