@@ -1,0 +1,13 @@
+evaluation,model,metric,value
+Random Split,DistilBERT,Accuracy,0.81
+Random Split,SVM,Accuracy,0.72
+Random Split,DistilBERT,Positive F1,0.92
+Random Split,SVM,Positive F1,0.8
+Random Split,DistilBERT,Negative F1,0.63
+Random Split,SVM,Negative F1,0.62
+Random Split,DistilBERT,Neutral F1,0.63
+Random Split,SVM,Neutral F1,0.59
+Temporal Split,DistilBERT,Accuracy,0.87
+Temporal Split,DistilBERT,Positive F1,0.93
+Temporal Split,DistilBERT,Negative F1,0.84
+Temporal Split,DistilBERT,Neutral F1,0.55
