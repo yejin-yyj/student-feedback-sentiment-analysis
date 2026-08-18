@@ -4,6 +4,8 @@
 
 This portfolio project is based on my MSc Business Analytics dissertation, **Using Sentiment Analysis to Improve Student Support Services**, completed at Alliance Manchester Business School, The University of Manchester.
 
+![Student Feedback Analytics Workflow](images/01_feedback_analytics_workflow.svg)
+
 ## Business Problem
 
 Universities collect large volumes of open-ended student feedback, but free-text comments are difficult to review consistently at scale. The central question was whether this feedback could be converted into a repeatable analysis process that helps identify emerging concerns, validate service strengths, and prioritize improvement actions.
@@ -63,6 +65,8 @@ Recurring strengths and weaknesses were mapped to specific areas for improvement
 
 ## Results
 
+![Model Performance Across Evaluation Scenarios](images/02_model_performance.svg)
+
 | Evaluation | Model | Accuracy | Positive F1 | Negative F1 | Neutral F1 |
 |---|---|---:|---:|---:|---:|
 | Random split | DistilBERT | **81%** | **0.92** | **0.63** | **0.63** |
@@ -76,6 +80,8 @@ DistilBERT outperformed the SVM baseline on the random split, supporting the use
 The result suggests that the model became stronger at identifying negative feedback in the later period, but neutral and suggestion-oriented comments remained more difficult to classify consistently. For practical use, automated classification could support prioritization, while ambiguous or neutral cases would still benefit from human review.
 
 ## Recommendations
+
+![From Feedback Patterns to Improvement Actions](images/03_insight_to_action_map.svg)
 
 The analysis linked recurring feedback patterns to actions such as:
 
@@ -97,6 +103,10 @@ student-feedback-sentiment-analysis/
 │   └── sample_feedback.csv
 ├── results/
 │   └── model_performance.csv
+├── images/
+│   ├── 01_feedback_analytics_workflow.svg
+│   ├── 02_model_performance.svg
+│   └── 03_insight_to_action_map.svg
 ├── requirements.txt
 └── .gitignore
 ```
