@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="460" viewBox="0 0 1600 460">
+  <rect width="1600" height="460" fill="white"/>
+  <style>
+    .title{font:700 34px Arial,sans-serif;fill:#111827}.sub{font:400 19px Arial,sans-serif;fill:#4B5563}.box{fill:#fff;stroke:#6B7280;stroke-width:2}.txt{font:600 18px Arial,sans-serif;fill:#111827}.arrow{stroke:#6B7280;stroke-width:2.5;fill:none;marker-end:url(#a)}
+  </style>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#6B7280"/></marker></defs>
+  <text x="800" y="60" text-anchor="middle" class="title">Student Feedback Analytics Workflow</text>
+  <text x="800" y="98" text-anchor="middle" class="sub">From unstructured feedback to validated insights and service actions</text>
+  <g>
+    <rect x="35" y="180" width="160" height="100" rx="16" class="box"/><text x="115" y="222" text-anchor="middle" class="txt"><tspan x="115">Problem</tspan><tspan x="115" dy="25">Definition</tspan></text>
+    <rect x="230" y="180" width="160" height="100" rx="16" class="box"/><text x="310" y="222" text-anchor="middle" class="txt"><tspan x="310">Data</tspan><tspan x="310" dy="25">Collection</tspan></text>
+    <rect x="425" y="180" width="160" height="100" rx="16" class="box"/><text x="505" y="222" text-anchor="middle" class="txt"><tspan x="505">Data</tspan><tspan x="505" dy="25">Cleaning</tspan></text>
+    <rect x="620" y="180" width="160" height="100" rx="16" class="box"/><text x="700" y="215" text-anchor="middle" class="txt"><tspan x="700">Feature</tspan><tspan x="700" dy="25">Representation</tspan></text>
+    <rect x="815" y="180" width="160" height="100" rx="16" class="box"/><text x="895" y="222" text-anchor="middle" class="txt"><tspan x="895">Model</tspan><tspan x="895" dy="25">Building</tspan></text>
+    <rect x="1010" y="180" width="160" height="100" rx="16" class="box"/><text x="1090" y="238" text-anchor="middle" class="txt">Evaluation</text>
+    <rect x="1205" y="180" width="160" height="100" rx="16" class="box"/><text x="1285" y="222" text-anchor="middle" class="txt"><tspan x="1285">Service</tspan><tspan x="1285" dy="25">Mapping</tspan></text>
+    <rect x="1400" y="180" width="160" height="100" rx="16" class="box"/><text x="1480" y="238" text-anchor="middle" class="txt">Deployment</text>
+  </g>
+  <path d="M195 230 H222" class="arrow"/><path d="M390 230 H417" class="arrow"/><path d="M585 230 H612" class="arrow"/><path d="M780 230 H807" class="arrow"/><path d="M975 230 H1002" class="arrow"/><path d="M1170 230 H1197" class="arrow"/><path d="M1365 230 H1392" class="arrow"/>
+  <text x="800" y="370" text-anchor="middle" class="sub">Adapted from the eight-step Cyclical Feedback Analytics Framework used in the dissertation</text>
+</svg>
